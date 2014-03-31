@@ -1,5 +1,6 @@
 gologer
-————
+--------
+
 ##简介 
 gologer 是一个C语言版nginx/apache日志分析工具，
 
@@ -16,9 +17,6 @@ Ubuntu
 sudo apt-get install libglib2.0-dev
   gcc -o gologer gologer.c  -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include   -lglib-2.0
 ````
-
-
-valgrind --tool=memcheck --leak-check=yes --leak-check=full --show-reachable=yes -v  ./gologer t.log 
 
 ## 使用方法
 
@@ -37,4 +35,11 @@ valgrind --tool=memcheck --leak-check=yes --leak-check=full --show-reachable=yes
 
   Output:
       result_20130705_114714.txt or result_20130705_114714.html
+```
+
+##基它
+内存泄漏检测
+
+```
+valgrind --tool=memcheck --leak-check=yes --leak-check=full --show-reachable=yes -v  ./gologer t.log 
 ```
